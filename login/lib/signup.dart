@@ -1,3 +1,5 @@
+import 'dart:convert';
+
 import 'package:flutter/material.dart';
 class SignUp extends StatelessWidget {
   const SignUp({super.key});
@@ -6,7 +8,7 @@ class SignUp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        appBar: AppBar(title: Text('Sign Up'),),
+        appBar: AppBar(title: Text('Sign Up'),backgroundColor: Color.fromARGB(255, 3, 92, 164),),
         drawer: Drawer(),
         body: SingleChildScrollView(
           child: Column(
@@ -49,8 +51,16 @@ class SignUp extends StatelessWidget {
                   ],
                   ),
               ),
-              SizedBox(height: 15.0,),
-              ElevatedButton(onPressed: (){}, child: Text('SIGN UP')),
+              
+              Row(
+                children: [
+                  SizedBox(height: 15.0, width: 80.0,),
+                  ElevatedButton(onPressed: (){}, child: Text('SIGN UP'),),
+                  SizedBox(height: 15.0, width: 30.0,),
+                  ElevatedButton(onPressed: (){Navigator.pushNamed(context, '/login');}, child: Text('Back')),
+                ],
+              ),
+
             ],
           ),
         ),

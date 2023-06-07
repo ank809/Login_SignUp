@@ -7,7 +7,7 @@ class Login extends StatelessWidget {
     return  MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
-      appBar: AppBar(title: Text('Login'),),
+      appBar: AppBar(title: Text('Login'),backgroundColor:Color.fromARGB(255, 3, 92, 164),),
       drawer: Drawer(),
       body: SingleChildScrollView(
         child: Column(
