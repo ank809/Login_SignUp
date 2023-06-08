@@ -12,6 +12,7 @@ class Login_Signup extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+       debugShowCheckedModeBanner:false,
       routes: {
         '/': (context) => Login(),
         '/login': (context) => Login(),
